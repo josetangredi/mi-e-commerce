@@ -1,9 +1,9 @@
-import React from 'react';
-import { FaShoppingCart } from 'react-icons/fa'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import { FaShoppingCart } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const CartWidget = () => {
-  const itemsInCart = 5; 
+  const itemsInCart = 5;
 
   return (
     <div className="position-relative">
