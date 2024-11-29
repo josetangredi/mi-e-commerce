@@ -5,7 +5,7 @@ import ProductsList from "./ProductsList";
 import { Spinner } from "react-bootstrap";
 
 const ItemListContainer = ({ greeting }) => {
-  const { categoryName } = useParams(); // Ahora obtenemos el nombre de la categoría
+  const { categoryName } = useParams(); // Obtenemos el nombre de la categoría de la URL
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -13,17 +13,17 @@ const ItemListContainer = ({ greeting }) => {
     const fetchProducts = async () => {
       setLoading(true);
       if (categoryName) {
-        const filteredProducts = await getCategory(categoryName); // Usar nombre de la categoría
+        const filteredProducts = await getCategory(categoryName); // Filtramos por categoría
         setProducts(filteredProducts);
       } else {
-        const allProducts = await getProducts(); // Si no hay categoría, mostrar todos los productos
+        const allProducts = await getProducts(); // Si no hay categoría, mostramos todos los productos
         setProducts(allProducts);
       }
       setLoading(false);
     };
 
     fetchProducts();
-  }, [categoryName]); // Dependiendo de 'categoryName', se vuelven a cargar los productos
+  }, [categoryName]); // Vuelve a cargar productos cuando cambia la categoría
 
   if (loading) {
     return (

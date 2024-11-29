@@ -8,7 +8,7 @@ export default function ProductCard({ product }) {
       <img src={product.image} alt={product.title} />
       <p>${product.price}</p>
       <button>
-        <Link to={`/item/${product.id}`}>Más detalles</Link>{" "}
+        <Link to={`/item/${product.id}`}>Más detalles</Link>
       </button>
     </article>
   );

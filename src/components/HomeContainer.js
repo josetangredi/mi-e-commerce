@@ -12,7 +12,7 @@ export default function HomeContainer() {
             Tenemos todo lo que necesitas para darle ese toque especial a tu
             espacio.
           </p>
-          <Link to="/products" className="home-button">
+          <Link to="/Products" className="home-button">
             Ver Más
           </Link>
         </div>

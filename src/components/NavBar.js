@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
@@ -31,10 +32,23 @@ const NavBar = () => {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/products">
-                Productos
-              </Link>
+            <li className="nav-item dropdown">
+              <Dropdown>
+                <Dropdown.Toggle className="nav-link" id="navbarDropdown">
+                  Productos
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item as={Link} to="/category/living">
+                    Living
+                  </Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/category/decoracion">
+                    Decoración
+                  </Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/category/usoDiario">
+                    Uso Diario
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contact">
@@ -44,7 +58,9 @@ const NavBar = () => {
           </ul>
         </div>
 
-        <CartWidget />
+        <Link to="/cart">
+          <CartWidget />
+        </Link>
       </div>
     </nav>
   );

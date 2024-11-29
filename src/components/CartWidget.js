@@ -1,17 +1,20 @@
 import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useCart } from "../context/CartContext"; // Importar el hook useCart
 
 const CartWidget = () => {
-  const itemsInCart = 5;
+  const { getTotalItems } = useCart(); // Usamos getTotalItems para obtener la cantidad total de productos
 
   return (
-    <div className="position-relative">
-      <FaShoppingCart size={24} />
-      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-        {itemsInCart}
-        <span className="visually-hidden">unread messages</span>
-      </span>
+    <div className="cart-widget">
+      <i
+        className="bi bi-cart custom-cart-icon"
+        style={{ color: "black", fontSize: "24px" }} // Aplica color negro
+      ></i>
+      {getTotalItems() > 0 && (
+        <span className="badge rounded-pill bg-danger cart-number">
+          {getTotalItems()}
+        </span>
+      )}
     </div>
   );
 };

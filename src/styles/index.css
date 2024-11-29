@@ -80,44 +80,120 @@ code {
   }
 }
 
-/* Detalle del producto seleccionado */
+/* index.css */
+/* Contenedor principal de la tarjeta */
 .product-details {
+  display: flex;
+  align-items: flex-start; /* Alinear la imagen y el contenido en la parte superior */
+  gap: 20px; /* Espacio entre la imagen y el contenido */
   padding: 20px;
-  background-color: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  height: auto; /* Ajustar la altura de acuerdo al contenido */
   margin: 20px auto;
-  text-align: center;
+  background-color: #f9f9f9;
 }
 
+/* Imagen del producto */
 .product-details img {
-  width: 100%; /* Tamaño reducido en la vista detallada */
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 2px;
+  width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+  max-width: 300px; /* Limita el ancho máximo de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 5px;
+  object-fit: cover; /* Asegura que la imagen se recorte bien */
+  display: block; /* Evita que la imagen tenga un espacio extra debajo */
 }
 
-.product-details button {
-  padding: 10px 20px;
-  background-color: rgb(202, 186, 128);
-  color: rgb(0, 0, 0);
+/* Contenedor de la información del producto */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px; /* Espacio entre los elementos */
+  width: 100%; /* Asegura que el contenedor ocupe el espacio restante */
+}
+
+/* Estilo para el título del producto */
+.product-title {
+  font-size: 28px;
+  color: #313030;
+  text-align: center; /* Centrado del texto */
+  margin-bottom: 15px; /* Reducido el margen inferior */
+  font-weight: 600; /* Mayor peso para el título */
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+/* Estilo para la descripción del producto */
+.product-description {
+  font-size: 16px;
+  color: #7f8c8d;
+  line-height: 1.5;
+  text-align: center; /* Alineado a la izquierda para mejor lectura */
+  margin-bottom: 20px;
+  font-weight: lighter;
+  overflow: hidden; /* Oculta el texto que sobrepasa si es muy largo */
+  max-height: 120px; /* Limita la altura máxima */
+}
+
+/* Estilo para el precio del producto */
+.product-price {
+  font-size: 20px;
+  color: #5b5150;
+  font-weight: 400;
+  text-align: center; /* Centrado del texto */
+  margin-bottom: 15px;
+}
+
+/* Contenedor de botones para alinearlos en fila */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espacio entre los botones */
+  margin-top: 20px;
+}
+
+/* Estilo para los botones */
+.custom-button,
+.back-button {
+  background-color: rgb(
+    202,
+    186,
+    128
+  ); /* Color consistente para ambos botones */
+  color: black;
   border: none;
+  padding: 8px 15px; /* Ajustado para un botón más pequeño */
+  font-size: 14px; /* Tamaño de fuente más pequeño */
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-}
-
-.product-details button:hover {
-  background-color: rgb(146, 134, 93);
-}
-
-.products-title {
-  font-size: 24px;
-  font-weight: lighter;
-  color: #333; /* Cambia el color según lo que necesites */
+  transition: background-color 0.3s;
   text-align: center;
-  margin: 20px 0;
+  width: 150px; /* Establece un ancho consistente para los botones */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px; /* Reducido el margen entre botones */
+}
+
+.custom-button:hover,
+.back-button:hover {
+  background-color: rgb(
+    180,
+    165,
+    105
+  ); /* Cambio de color en hover para mejorar la interacción */
+}
+
+/* Estilo del contador de cantidad */
+.item-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 /* Estilos generales para el contenedor del contacto */
@@ -299,4 +375,136 @@ code {
   color: #333;
   font-weight: lighter;
   text-align: center;
+}
+
+.cart-title {
+  font-size: 2rem;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #333;
+  font-weight: lighter;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cart-total {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.cart-item-card {
+  margin-left: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Alineación vertical para que los elementos queden centrados */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd; /* Añadir borde para mejorar la apariencia */
+  border-radius: 100px;
+  background-color: #fff; /* Fondo blanco */
+  width: 1000px;
+}
+
+.cart-item-image {
+  width: 180px; /* Aumentar el tamaño de la imagen */
+  height: 180px; /* Aumentar el tamaño de la imagen */
+  margin-right: 60px; /* Espaciado entre la imagen y los datos */
+  margin-left: 10px;
+  overflow: hidden;
+  border-radius: 50%; /* Redondear la imagen */
+}
+
+.cart-item-image img {
+  width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+  height: 100%; /* Asegura que la imagen se ajuste al contenedor */
+  object-fit: cover; /* Mantiene la proporción y cubre el contenedor */
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* Permite que el contenedor de los datos ocupe todo el espacio disponible */
+}
+
+.cart-item-title {
+  font-size: 28px; /* Título un poco más grande */
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  font-size: 20px; /* Precio un poco más pequeño */
+  margin-bottom: 10px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-input {
+  width: 60px;
+  text-align: center;
+}
+
+.remove-button {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.remove-button button {
+  padding: 8px 16px; /* Espacio dentro del botón */
+  background-color: #dc3545; /* Rojo brillante para el fondo */
+  color: white; /* Texto blanco */
+  border: none; /* Eliminar borde predeterminado */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambio de cursor al pasar por encima */
+  transition: background-color 0.3s, transform 0.2s; /* Efectos suaves */
+  display: inline-block; /* Asegura que el botón ocupe solo el espacio necesario */
+}
+
+.remove-button button:hover {
+  background-color: #c82333; /* Rojo más oscuro al hacer hover */
+  transform: scale(1.05); /* Efecto de aumento al hacer hover */
+}
+
+.remove-button button:focus {
+  outline: none; /* Eliminar el contorno al hacer clic */
+}
+
+.remove-button button:active {
+  background-color: #bd2130; /* Rojo más oscuro al hacer clic */
+}
+
+.not-product {
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  text-align: center; /* Asegura que el texto esté centrado */
+  font-size: 1.5rem; /* Ajusta el tamaño del texto */
+  font-weight: lighter; /* Opción de darle negrita al texto */
+  color: #888; /* Un color gris para el texto */
+}
+
+.custom-cart-icon {
+  color: black !important; /* Asegúrate de que el color del icono sea negro */
+}
+
+.cart-widget {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacio entre el icono y el número */
+}
+
+.cart-number {
+  margin-left: 5px;
 }
