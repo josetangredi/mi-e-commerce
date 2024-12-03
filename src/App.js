@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import HomeContainer from "./components/HomeContainer"; // Importa el HomeContainer
+import HomeContainer from "./components/HomeContainer";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import CartPage from "./components/CartPage";
@@ -23,7 +23,7 @@ function App() {
           />{" "}
           {/* Ruta de categoría */}
           <Route path="/item/:id" element={<ItemDetailContainer />} />{" "}
-          {/* Ruta para ver el detalle de un producto */}
+          {/* Ruta para detalle de un producto */}
           <Route path="/cart" element={<CartPage />} /> {/* Ruta al carrito */}
           <Route path="/contact" element={<Contact />} />{" "}
           {/* Ruta de contacto */}
@@ -32,4 +32,5 @@ function App() {
     </CartProvider>
   );
 }
+
 export default App;

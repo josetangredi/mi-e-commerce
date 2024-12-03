@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    title: "Almohadon",
+    title: "almohadon",
     price: 80000,
     category: "living",
     description:
@@ -23,7 +23,7 @@ const products = [
     price: 28000,
     category: "decoracion",
     description:
-      "Manta de 150x200 cm en mezcla de lana y acrílico. Suave, resistente y lavable a máquina.",
+      "Canasta tejida a mano, perfecta para organizar y decorar tu hogar.",
     image: "/images/canasta2.jpg",
   },
   {
