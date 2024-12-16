@@ -1,25 +1,24 @@
-// Importar webpack
 const webpack = require("webpack");
 
 module.exports = {
   webpack: {
     configure: (webpackConfig) => {
       webpackConfig.resolve.fallback = {
-        path: require.resolve("path-browserify"),
+        ...webpackConfig.resolve.fallback,
         os: require.resolve("os-browserify/browser"),
+        path: require.resolve("path-browserify"),
         crypto: require.resolve("crypto-browserify"),
         stream: require.resolve("stream-browserify"),
-        process: require.resolve("process/browser"), // Incluir el polyfill de process
+        vm: require.resolve("vm-browserify"), // Polyfill para 'vm'
       };
-
-      webpackConfig.plugins = [
-        ...webpackConfig.plugins,
-        new webpack.ProvidePlugin({
-          process: "process/browser", // Incluir 'process' como global
-        }),
-      ];
 
       return webpackConfig;
     },
+    plugins: [
+      new webpack.ProvidePlugin({
+        process: "process/browser", // Soporte para 'process'
+        Buffer: ["buffer", "Buffer"], // Soporte para 'Buffer'
+      }),
+    ],
   },
 };

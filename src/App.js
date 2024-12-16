@@ -7,6 +7,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import CartPage from "./components/CartPage";
 import Contact from "./components/ContactContainer";
 import { CartProvider } from "./context/CartContext";
+import { Buffer } from "buffer";
 
 function App() {
   return (

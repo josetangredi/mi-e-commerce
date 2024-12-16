@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# E-Commerce de Decoración para el Hogar - _La Urdimbre_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una e-commerce diseñada para la venta de productos de decoración para el hogar, como almohadones, mantas, difusores, botellones, canastas, individuales y puff. Fue creado con React para ofrecer una experiencia de usuario interactiva y moderna.
 
-## Available Scripts
+## Tecnologías Utilizadas
 
-In the project directory, you can run:
+- **React**: Framework principal para la creación de la interfaz.
+- **CSS**: Para los estilos personalizados.
+- **JavaScript (ES6)**: Lógica de la aplicación.
+- **SweetAlert**: Para alertas y notificaciones.
+- **LocalStorage**: Para almacenar datos del carrito.
+- **Fetch API**: Para manejo de datos externos.
+- **Vercel/Netlify**: Despliegue en producción.
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Catálogo de productos con imágenes, precios y descripciones.
+- Sistema de carrito de compras que permite:
+  - Agregar y eliminar productos.
+  - Visualizar el precio total en tiempo real.
+- Página de contacto para consultas de los usuarios.
+- Sistema de scroll para facilitar la navegación entre secciones.
+- Diseño responsivo para una experiencia óptima en dispositivos móviles y desktop.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Cómo Instalar y Ejecutar Localmente
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clona este repositorio en tu máquina:
+   ```bash
+   git clone https://github.com/josetangredi/mi-e-commerce.git
+   ```
