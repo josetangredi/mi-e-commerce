@@ -1,16 +1,23 @@
-// craco.config.js
-const path = require('path');
+const webpack = require("webpack");
 
 module.exports = {
   webpack: {
-    resolve: {
-      fallback: {
-        "buffer": require.resolve("buffer/"),
-        "crypto": require.resolve("crypto-browserify"),
-        "stream": require.resolve("stream-browserify"),
-        "vm": require.resolve("vm-browserify"),
-        "path": require.resolve("path-browserify"),
-      },
+    configure: (webpackConfig) => {
+      webpackConfig.resolve.fallback = {
+        stream: require.resolve("stream-browserify"),
+        crypto: require.resolve("crypto-browserify"),
+        vm: require.resolve("vm-browserify"),
+      };
+
+      // Agregar polyfills para Buffer y process si es necesario
+      webpackConfig.plugins.push(
+        new webpack.ProvidePlugin({
+          Buffer: ["buffer", "Buffer"],
+          process: "process/browser",
+        })
+      );
+
+      return webpackConfig;
     },
   },
 };
